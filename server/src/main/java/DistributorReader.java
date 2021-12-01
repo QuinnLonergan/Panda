@@ -39,7 +39,9 @@ public class DistributorReader {
                     if (Objects.equals(candyName, currentCandy)) {
                         // If the candy's price is lower than the max value or previous price, it will become the new lowest
                         double currentCost = workbook.getSheetAt(i).getRow(j).getCell(2).getNumericCellValue();
-                        if (currentCost < cheapest) cheapest = currentCost;
+                        if (currentCost < cheapest) {
+                            cheapest = currentCost;
+                        }
                     }
                 }
             }
